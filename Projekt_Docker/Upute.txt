@@ -1,0 +1,6 @@
+Za početak trebamo započeti naš docker-compose.yml datoteku sa "docker-compose up". 
+Nakon što vidimo poruku da su database_regular, database_slave i database_ master spremni za povezivanje, u novom terminalu izvodimo komandu "bash setup_db.sh" kako bi povezali master sa slaveom
+Nakon toga preuzimamo sve potrebne python module sa "pip install -r requirements.txt"
+Kako bi dodali podatke u baze podataka, koristimo skriptu "EnterData.py" sa komandom "python EnterData.py". Trenutno je postavljeno na 100000 upisa, ali skriptu je moguće mijenjati po potrebi.
+Nakon upisivanja možemo testirati čitanje samo iz master server-a sa skriptom "ReadFromMaster.py", sa komandom "python ReadFromMaster.py".
+Čitanje iz master server-a i slave server-a možemo odraditi sa skritom "MultiprocessingMasterSlave.py". U skriptu "MultiprocessingMasterSlave.py" je potrebno upisati koliko linija podataka imamo u bazi podataka kako bi skripta mogla polovicu podataka iz jednog servera, te polovicu podataka iz drugog servera.
